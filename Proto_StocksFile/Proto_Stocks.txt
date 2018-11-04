@@ -1,0 +1,13 @@
+GOOG
+"Alphabet Inc."
+1161.63
+1164.64
+1176.08
+END
+AMD
+"Advanced Micro Devices Inc."
+30.0
+29.89
+30.21
+END
+END
