@@ -44,7 +44,7 @@ public class IEX_Caller {
 	
 	/*
 	 * Strings that correspond to various attributes in the JSON file
-	 * which IEX returns.
+	 * which IEX returns. TODO learn GSON
 	 */
 	public static final String OPEN_MATCH = "\"open\""; // attribute for daily opening price of stock
 	public static final String CLOSE_MATCH = "\"close\""; // attribute for daily closing price of stock
