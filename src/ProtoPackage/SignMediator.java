@@ -15,7 +15,7 @@ import java.net.UnknownHostException;
  *
  */
 public class SignMediator {
-
+// added a comment to deploy branch
 	public static final String IP_ADDRESS = "10.23.122.11"; // TODO InetAddress?
 	public static final int PORT = 40001; // TODO
 
@@ -27,7 +27,7 @@ public class SignMediator {
  * if server is on other side tcp, might respond with a prompt
  * if http, get and give a url
  * clear text protocol?
- * what is protocol? what is supported at port 4001
+ * what is protocol? what is supported at port 40001
  * 
  */
 	public void connectToSign() {
