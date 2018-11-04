@@ -16,12 +16,12 @@ import java.net.URLConnection;
  */
 public class IEX_Caller {
 
-	/*
-	 * Constants
-	 */
 	public static final String IEX_ATTRIBUTION = "Data provided for free by IEX... "; // View IEX's Terms of Use at
 																						// https://iextrading.com/api-exhibit-a/
 																						// ... ";
+	/*
+	 * messages when making the call
+	 */
 	public static final String UNKNOWN_SYMBOL_ERROR = "Unknown symbol"; // IEX's unknown symbol message
 	public static final String UNFINISHED_BUILD_ERROR = "Probelem with software - incomplete reading of stock information";
 	public static final String COMPLETED_CALL = "good";
@@ -41,14 +41,15 @@ public class IEX_Caller {
 
 	/*
 	 * Strings that correspond to various attributes in the JSON file which IEX
-	 * returns. TODO learn GSON
+	 * returns. TODO learn GSON and use GSON instead of this thing
 	 */
 	public static final String OPEN_MATCH = "\"open\""; // attribute for daily opening price of stock
 	public static final String CLOSE_MATCH = "\"close\""; // attribute for daily closing price of stock
-	public static final String NAME_MATCH = "\"companyName\"";
-	public static final String LATEST_PRICE_MATCH = "latestPrice";
+	public static final String NAME_MATCH = "\"companyName\""; // attribute for company name
+	public static final String LATEST_PRICE_MATCH = "latestPrice"; // attribute for latest price
 
 	public IEX_Caller() {
+		super();
 	}
 
 	/**
@@ -67,7 +68,7 @@ public class IEX_Caller {
 		BufferedReader buffr = null;
 		try {
 			/*
-			 * Connect to the API and read in the input
+			 * Connect to the API and read in the input as stream
 			 */
 			URL url = new URL(url_path);
 			System.out.println("url is: " + url.getPath());
@@ -118,6 +119,8 @@ public class IEX_Caller {
 	 * Given a BufferedReader : buffr holding onto an InputStream from an IEX API
 	 * call and a Stock, reads in information from buffr and fills up the Stock with
 	 * the stuff.
+	 * 
+	 * TODO replace this all with GSON
 	 * 
 	 * @param buffr
 	 * @param s
