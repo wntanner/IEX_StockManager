@@ -16,8 +16,8 @@ import java.net.UnknownHostException;
  */
 public class SignMediator {
 // added a comment to deploy branch
-	public static final String IP_ADDRESS = "10.23.122.11"; // TODO InetAddress?
-	public static final int PORT = 40001; // TODO
+	public static final String IP_ADDRESS = "----"; // TODO InetAddress?
+	public static final int PORT = -11111; // TODO
 
 	public SignMediator() {
 
